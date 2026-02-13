@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Prevents zooming for better full-screen experience -->
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="homescreen">
+        <h1>Tetris</h1>
+        <div id="description" style="display: none;">
+            <h2>How to Play</h2>
+            <p>Objective: Clear lines by filling rows with falling blocks (tetrominoes). Score points by clearing lines!</p>
+            <p>Controls:</p>
+            <ul>
+                <li>Desktop: Arrow Keys or WASD (A/D for left/right, S for down, W for rotate clockwise, Z for counter-clockwise, Space for hard drop)</li>
+                <li>Mobile: Use on-screen buttons below the game board or touch gestures (tap sides to move, center to rotate, swipe down to soft drop, double-tap for hard drop). Game goes full-screen for immersive play.</li>
+            </ul>
+            <p>Select a difficulty below to start!</p>
+        </div>
+        <div id="difficulty-buttons">
+            <button id="easy">Easy</button>
+            <button id="medium">Medium</button>
+            <button id="hard">Hard</button>
+        </div>
+        <button id="start-game" style="display: none;">Start Game</button>
+        <button id="help-button">?</button>
+    </div>
+    <div id="game-container" style="display: none;">
+        <button id="home-button">Home</button>
+        <div id="score">Score: 0</div>
+        <div id="next-piece">Next:</div>
+        <canvas id="tetris-canvas" width="300" height="600"></canvas>
+        <div id="mobile-controls">
+            <button id="left-btn">←</button>
+            <button id="rotate-btn">↻</button>
+            <button id="right-btn">→</button>
+            <button id="soft-drop-btn">↓</button>
+            <button id="hard-drop-btn">⯆</button>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
